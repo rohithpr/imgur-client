@@ -20,9 +20,9 @@ const actions = {
     const query = qs.parse(hash.replace("#", ""));
     commit("setToken", query.access_token);
     window.localStorage.setItem("imgurToken", query.access_token);
-    router.push('/')
+    router.push("/");
   },
-  login: ({ commit }) => {
+  login: () => {
     api.login();
   }
 };
