@@ -1,5 +1,7 @@
 # images
 
+Repo for project following the [Vue.js course](https://www.udemy.com/vue-js-course/) on Udemy. Base project generated using `vue cli`.
+
 ## Project setup
 ```
 npm install
