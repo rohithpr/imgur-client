@@ -1,3 +1,4 @@
+import axios from "axios";
 import qs from "qs";
 
 const CLIENT_ID = "20137c435108c55";
@@ -10,6 +11,16 @@ export default {
       response_type: "token"
     };
 
-    window.location = `${BASE_URL}/oauth2/authorize?${qs.stringify(queryString)}`
+    window.location = `${BASE_URL}/oauth2/authorize?${qs.stringify(
+      queryString
+    )}`;
+  },
+
+  fetchImages(token) {
+    return axios.get(`${BASE_URL}/3/account/me/images`, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
   }
 };
